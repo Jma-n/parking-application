@@ -1,0 +1,18 @@
+@keyframes car-1 {
+    0% {
+       transform: translateX(-40px) translateY(150px) rotate(0deg);
+       }
+       25% {
+       transform: translateX(0px) translateY(150px) rotate(0deg);
+       }
+       50% {
+       transform: translateX(40px) translateY(150px) rotate(-90deg);
+       }
+       75% {
+       transform: translateX(40px) translateY(60px) rotate(-90deg);
+       }
+       100% {
+       transform: translateX(59px) translateY(5px) rotate(0deg);
+       }
+
+}

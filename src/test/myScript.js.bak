@@ -1,0 +1,50 @@
+    function changeColor(e) {
+       console.log(e);
+       console.log(e.style.fill);
+       var currentColor = e.style.fill;
+
+       if (currentColor === "red") {
+          e.style.fill = "green"
+       } else {
+          e.style.fill = "red"
+       }
+    }
+
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    $(document).ready(function () {
+       $.ajax({
+          url: 'http://localhost:8080/swagger-ui/index.html#/rest-controller/setState',
+          type: 'GET',
+          dataType: 'text',
+          success: function (data) {
+             alert(data);
+          }
+       });
+    });
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        function updateParkplatzStatus() {
+            $.ajax({
+                url: "/state", // Endpunkt der API
+                method: "GET",
+                success: function (data) {
+                    var status = JSON.parse(data);
+                    displayParkplatzStatus(status);
+                }
+            })
+        };
+
+
+         function displayParkplatzStatus(status) {
+             for (var key in status) {
+                 if (status[key] === 0) {
+                     // Setze Ampelfarbe auf grün
+                     $('#' + key).css('fill', 'green');
+                 } else {
+                     // Setze Ampelfarbe auf rot
+                     $('#' + key).css('fill', 'red');
+                 }
+             }
+         };
+
+    setInterval(updateParkplatzStatus(), 30000);
+

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cycos Parken</title>
+    <style>
+        .text-Black {
+           color: #fa5f55;
+        }
+
+        .ampel {
+           width: 50px;
+           height: 100px;
+           display: inline-block;
+           margin-right: 20px;
+        }
+
+        .ampel .licht {
+           width: 40px;
+           height: 40px;
+           border-radius: 50%;
+           margin: 10px auto;
+        }
+
+        .frei {
+           background-color: green;
+        }
+
+        .besetzt {
+           background-color: red;
+        }
+
+        .design {
+           display: flex;
+           flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+<script src="myScript.js"></script>
+
+<h1 class="text-Black">Cycos Parken</h1>
+<p class="text-Black">Parkflächen Anzeige</p>
+<div class="design">
+    <div class="ampel">
+        <div class="licht frei"></div>
+        Frei
+    </div>
+    <div class="ampel">
+        <div class="licht besetzt"></div>
+        Besetzt
+    </div>
+</div>
+
+
+<div class="svg">
+
+    <svg
+            width="500"
+            height="1000"
+            viewBox="0 0 128.88166 257.76332"
+            version="1.1"
+            id="svg1"
+            inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+            sodipodi:docname="ParkPlatz2.svg"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg">
+        <defs
+                id="defs1">
+            <rect
+                    x="-11.338583"
+                    y="325.03937"
+                    width="200.31496"
+                    height="109.6063"
+                    id="rect3"/>
+        </defs>
+        <g
+                inkscape:label="Ebene 1"
+                inkscape:groupmode="layer"
+                id="layer1">
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80"
+                    width="33.999722"
+                    height="15.954144"
+                    x="5"
+                    y="5"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-80"
+                    cx="31.875196"
+                    cy="12.977072"
+                    r="2.5576408"
+                    onclick="updateParkplatzStatus()"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="8.1459761"
+                    y="15.028969"
+                    id="Number-PL-80"><tspan
+               sodipodi:role="line"
+               id="tspan1"
+               style="fill:#000000;stroke-width:0.264583"
+               x="8.1459761"
+               y="15.028969">80</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-81"
+                    width="33.999722"
+                    height="15.954144"
+                    x="5.1123233"
+                    y="23.112324"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-79"
+                    cx="31.98752"
+                    cy="31.089396"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="8.2582998"
+                    y="33.141289"
+                    id="Number-PL-81"><tspan
+               sodipodi:role="line"
+               id="tspan1-3"
+               style="fill:#000000;stroke-width:0.264583"
+               x="8.2582998"
+               y="33.141289">79</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-82"
+                    width="33.999722"
+                    height="15.954144"
+                    x="5"
+                    y="41"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-78"
+                    cx="31.875196"
+                    cy="48.97707"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="8.145977"
+                    y="51.028965"
+                    id="Number-PL-82"><tspan
+               sodipodi:role="line"
+               id="tspan1-3-4"
+               style="fill:#000000;stroke-width:0.264583"
+               x="8.145977"
+               y="51.028965">78</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-82-9"
+                    width="33.999722"
+                    height="15.954144"
+                    x="5.0001392"
+                    y="59"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-77"
+                    cx="31.875336"
+                    cy="66.977066"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="8.1461163"
+                    y="69.028961"
+                    id="Number-PL-82-0"><tspan
+               sodipodi:role="line"
+               id="tspan1-3-4-9"
+               style="fill:#000000;stroke-width:0.264583"
+               x="8.1461163"
+               y="69.028961">77</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-82-9-0"
+                    width="33.999722"
+                    height="15.954144"
+                    x="5.1123233"
+                    y="77"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-76"
+                    cx="31.98752"
+                    cy="84.977066"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="8.2583008"
+                    y="87.028961"
+                    id="Number-PL-82-0-9"><tspan
+               sodipodi:role="line"
+               id="tspan1-3-4-9-3"
+               style="fill:#000000;stroke-width:0.264583"
+               x="8.2583008"
+               y="87.028961">76</tspan></text>
+            <text
+                    xml:space="preserve"
+                    transform="scale(0.26458333)"
+                    id="text3"
+                    style="font-size:21.3333px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;stroke:none"/>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-82-9-9"
+                    width="33.999722"
+                    height="15.954144"
+                    x="5.1123233"
+                    y="95"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-75"
+                    cx="31.98752"
+                    cy="102.97707"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="8.2583008"
+                    y="105.02896"
+                    id="Number-PL-82-0-7"><tspan
+               sodipodi:role="line"
+               id="tspan1-3-4-9-0"
+               style="fill:#000000;stroke-width:0.264583"
+               x="8.2583008"
+               y="105.02896">75</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-1"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="5"/>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-2"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="23"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-82"
+                    cx="86.295837"
+                    cy="30.677361"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146114"
+                    y="33.028969"
+                    id="Number-PL-80-9"><tspan
+               sodipodi:role="line"
+               id="tspan1-2"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146114"
+               y="33.028969">82</tspan></text>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-81"
+                    cx="85.875336"
+                    cy="12.977072"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146114"
+                    y="15.028969"
+                    id="Number-PL-80-8"><tspan
+               sodipodi:role="line"
+               id="tspan1-5"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146114"
+               y="15.028969">81</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-14"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000134"
+                    y="41"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-83"
+                    cx="84.931267"
+                    cy="50.160591"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146111"
+                    y="51.028969"
+                    id="Number-PL-80-85"><tspan
+               sodipodi:role="line"
+               id="tspan1-58"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146111"
+               y="51.028969">83</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-4"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="59"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-84"
+                    cx="83.87294"
+                    cy="68.943565"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.79909px;fill:#000000;stroke:none;stroke-width:0.271832"
+                    x="60.470615"
+                    y="72.940651"
+                    id="Number-PL-80-1"
+                    transform="scale(1.0273988,0.97333188)"><tspan
+               sodipodi:role="line"
+               id="tspan1-0"
+               style="fill:#000000;stroke-width:0.271832"
+               x="60.470615"
+               y="72.940651">84</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-0"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="76.999992"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-85"
+                    cx="84.402107"
+                    cy="88.527611"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146114"
+                    y="88.462837"
+                    id="Number-PL-80-0"><tspan
+               sodipodi:role="line"
+               id="tspan1-6"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146114"
+               y="88.462837">85</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="95"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-86"
+                    cx="84.666687"
+                    cy="105.53471"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146114"
+                    y="105.99911"
+                    id="Number-PL-80-6"><tspan
+               sodipodi:role="line"
+               id="tspan1-7"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146114"
+               y="105.99911">86</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-5"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="113.00001"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-87"
+                    cx="84.666687"
+                    cy="123.53473"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146114"
+                    y="123.99913"
+                    id="Number-PL-80-6-2"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-7"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146114"
+               y="123.99913">87</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="131.00002"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-88"
+                    cx="84.666695"
+                    cy="141.53473"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.146114"
+                    y="141.99913"
+                    id="Number-PL-80-6-5"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.146114"
+               y="141.99913">88</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3-1"
+                    width="33.999722"
+                    height="15.954144"
+                    x="59.000137"
+                    y="149.00003"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-89"
+                    cx="84.552414"
+                    cy="159.53474"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.031845"
+                    y="159.99915"
+                    id="Number-PL-80-6-5-1"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9-9"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.031845"
+               y="159.99915">89</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3-8"
+                    width="33.999722"
+                    height="15.954144"
+                    x="58.975334"
+                    y="166.76534"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-90"
+                    cx="84.641891"
+                    cy="176.56516"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.031845"
+                    y="178.61703"
+                    id="Number-PL-80-6-5-4"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9-2"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.031845"
+               y="178.61703">90</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3-6"
+                    width="33.999722"
+                    height="15.954144"
+                    x="58.975334"
+                    y="184.53064"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-91"
+                    cx="84.641891"
+                    cy="195.06535"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.031845"
+                    y="195.52975"
+                    id="Number-PL-80-6-5-3"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9-0"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.031845"
+               y="195.52975">91</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3-14"
+                    width="33.999722"
+                    height="15.954144"
+                    x="58.975334"
+                    y="202.29594"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-92"
+                    cx="84.641891"
+                    cy="211.24326"
+                    r="2.5576408"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="62.031845"
+                    y="213.29514"
+                    id="Number-PL-80-6-5-36"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9-4"
+               style="fill:#000000;stroke-width:0.264583"
+               x="62.031845"
+               y="213.29514">92</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3-14-1"
+                    width="33.999722"
+                    height="15.954144"
+                    x="-221.21991"
+                    y="1.1931783"
+                    transform="rotate(-90)"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-162"
+                    cx="-195.55336"
+                    cy="9.1702499"
+                    r="2.5576408"
+                    transform="rotate(-90)"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="-219.3997"
+                    y="11.222147"
+                    id="Number-PL-80-6-5-36-9"
+                    transform="rotate(-90)"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9-4-5"
+               style="fill:#000000;stroke-width:0.264583"
+               x="-219.3997"
+               y="11.222147">162</tspan></text>
+            <rect
+                    style="fill:#ffffff;stroke:#000000;stroke-width:0.224647"
+                    id="Rect-PL-80-5-3-14-19"
+                    width="33.999722"
+                    height="15.954144"
+                    x="-221.21991"
+                    y="21.550451"
+                    transform="rotate(-90)"/>
+            <circle
+                    style="fill:#008000;stroke:none;stroke-width:0.264583"
+                    id="Availability-PL-161"
+                    cx="-195.55336"
+                    cy="29.527523"
+                    r="2.5576408"
+                    transform="rotate(-90)"
+                    onclick="changeColor(this)"/>
+            <text
+                    xml:space="preserve"
+                    style="font-size:5.64444px;fill:#000000;stroke:none;stroke-width:0.264583"
+                    x="-219.28258"
+                    y="31.575287"
+                    id="Number-PL-80-6-5-36-5"
+                    transform="rotate(-90)"><tspan
+               sodipodi:role="line"
+               id="tspan1-7-9-4-9"
+               style="fill:#000000;stroke-width:0.264583"
+               x="-219.28258"
+               y="31.575287">161</tspan></text>
+        </g>
+        <g>
+            <rect
+                    style="fill:red;stroke:#000000;stroke-width:0.224647"
+                    id="car1"
+                    width="33.999722"
+                    height="15.954144"
+                    x="0"
+                    y="0"
+                    class="car parc-81"
+            />
+        </g>
+
+    </svg>
+
+
+</div>
+<script>
+    setInterval(updateParkplatzStatus, 10000);
+</script>
+
+<style>
+    .car {
+       transform: translateX(-40px) translateY(150px) rotate(0deg);
+    }
+    .parc-81 {
+        animation: car-1 1s linear;
+    }
+    .unparc-81 {
+
+        animation: car-1 1s linear reverse;
+    }
+
+@keyframes car-1 {
+    0% {
+       transform: translateX(-40px) translateY(150px) rotate(0deg);
+       }
+       25% {
+       transform: translateX(0px) translateY(150px) rotate(0deg);
+       }
+       50% {
+       transform: translateX(40px) translateY(150px) rotate(-90deg);
+       }
+       75% {
+       transform: translateX(40px) translateY(60px) rotate(-90deg);
+       }
+       100% {
+       transform: translateX(59px) translateY(5px) rotate(0deg);
+       }
+
+}
+
+</style>
+
+</body>
+
+
+</html>
