@@ -96,7 +96,7 @@ You can interact with the system via the USB serial connection with the followin
 
 
 
-ParkingServer.ino: # LoRa Receiver for Smart Parking System
+## ParkingServer.ino: # LoRa Receiver for Smart Parking System
 
 This Arduino code runs on a **SparkFun LoRa Board** and functions as a LoRa receiver for a smart parking system. The receiver listens for LoRa messages from multiple parking sensors, processes the received data, and forwards it to a **Raspberry Pi** via serial communication (`Serial1`). It also provides options for debugging and heartbeat signals over the USB connection.
 
