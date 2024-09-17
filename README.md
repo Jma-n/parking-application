@@ -177,11 +177,11 @@ This program listens for LoRa messages from parking sensors, forwards them to a 
 
 ## Java Code
 
-# 🚗 Parking Lot Management System
+#  Parking Lot Management System
 
 This repository contains a **Spring Boot** application that manages parking lot sensors. The system interacts with a PostgreSQL database to store and retrieve parking lot states, while using a serial port to read data from sensors. The main components of the application include controllers, repository classes for data access, and a serial receiver that captures parking sensor data.
 
-## 📂 Project Structure
+##  Project Structure
 
 ### **Lot Class**
 The `Lot` class represents a parking lot object, containing fields such as:
@@ -221,14 +221,14 @@ This class listens to a serial port for incoming data from parking sensors. The 
 
 The data is processed and stored in the database via the `LotRepository`. If the MAC address does not exist in the system, a warning is logged.
 
-### 📦 **Technologies Used**
+###  **Technologies Used**
 - **Java**: Programming language
 - **Spring Boot**: Framework for creating RESTful web services
 - **PostgreSQL**: Database for storing parking lot data
 - **JSerialComm**: Library for serial port communication
 - **Lombok**: To reduce boilerplate code (e.g., `@Slf4j` for logging)
 
-## 🚀 **How to Run the Project**
+##  **How to Run the Project**
 
 1. Clone the repository:
    ```bash
@@ -241,8 +241,6 @@ Run the SQL scripts to create the required tables (states and sensors).
 Make sure to delet your Application.properties so it works in combination with the Arduino Code.
 
 
-
-
 3.
 
 Interact with the REST API using a tool like Postman or curl.
@@ -253,7 +251,6 @@ POST /state?lot=<lot>&state=<state>: Set the state of a parking lot.
 DELETE /deleteLot?mac=<mac>: Delete a parking lot by MAC address.
 DELETE /deleteSensor?mac=<mac>: Delete a sensor by MAC address.
 POST /editSensor?mac=<mac>&lot=<lot>: Edit or add a new sensor.
-
 
 
 4.
