@@ -175,7 +175,7 @@ During the initial USB setup, the following commands can be entered via the USB 
 This program listens for LoRa messages from parking sensors, forwards them to a Raspberry Pi via `Serial1`, and sends acknowledgments back to the sensors. It also offers optional debugging and heartbeat modes, which can be activated via USB commands.
 
 
-##Java Code
+## Java Code
 
 # 🚗 Parking Lot Management System
 
