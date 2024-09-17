@@ -174,3 +174,96 @@ During the initial USB setup, the following commands can be entered via the USB 
 
 This program listens for LoRa messages from parking sensors, forwards them to a Raspberry Pi via `Serial1`, and sends acknowledgments back to the sensors. It also offers optional debugging and heartbeat modes, which can be activated via USB commands.
 
+
+##Java Code
+
+# 🚗 Parking Lot Management System
+
+This repository contains a **Spring Boot** application that manages parking lot sensors. The system interacts with a PostgreSQL database to store and retrieve parking lot states, while using a serial port to read data from sensors. The main components of the application include controllers, repository classes for data access, and a serial receiver that captures parking sensor data.
+
+## 📂 Project Structure
+
+### **Lot Class**
+The `Lot` class represents a parking lot object, containing fields such as:
+- `number` (int) - The lot number.
+- `status` (int) - The status of the lot (occupied, free, etc.).
+- `rssi` (int) - The received signal strength indicator.
+- `lastSeen` (long) - Timestamp of the last sensor communication.
+- `mac` (char) - The MAC address of the sensor.
+- `batteryState` (float) - The battery state of the sensor.
+
+### **LotRepository Class**
+The `LotRepository` class is responsible for interacting with the database. It provides methods to:
+- **selectLot(int lotNumber):** Retrieves the state of a specific parking lot.
+- **selectAllLots():** Retrieves the state of all parking lots.
+- **returnLot(String mac):** Returns the lot associated with a given MAC address.
+- **upsertLots(String mac, int lot, int state, float batteryState, int rssi):** Inserts or updates the state of a parking lot.
+- **upsertSensors(String mac, int lot):** Inserts or updates sensor information.
+- **deleteLot(String mac):** Deletes a parking lot based on its MAC address.
+- **deleteSensors(String mac):** Deletes a sensor from the database.
+- **macAddressExists(String mac):** Checks if a MAC address already exists in the database.
+
+### **RESTController Class**
+The `RESTController` class exposes various endpoints to interact with the parking lot states:
+- **GET /state?lot=\<lotNumber\>:** Fetches the state of a specific parking lot.
+- **GET /state/all:** Fetches the states of all parking lots.
+- **POST /state?lot=\<lot\>&state=\<state\>:** Updates the state of a parking lot.
+- **DELETE /deleteLot?mac=\<macAddress\>:** Deletes a parking lot by its MAC address.
+- **DELETE /deleteSensor?mac=\<macAddress\>:** Deletes a sensor by its MAC address.
+- **POST /editSensor?mac=\<mac\>&lot=\<lot\>:** Updates or inserts a sensor.
+
+### **SerialLotReceiver Class**
+This class listens to a serial port for incoming data from parking sensors. The serial data includes:
+- MAC address
+- Lot status
+- Battery status
+- RSSI value
+
+The data is processed and stored in the database via the `LotRepository`. If the MAC address does not exist in the system, a warning is logged.
+
+### 📦 **Technologies Used**
+- **Java**: Programming language
+- **Spring Boot**: Framework for creating RESTful web services
+- **PostgreSQL**: Database for storing parking lot data
+- **JSerialComm**: Library for serial port communication
+- **Lombok**: To reduce boilerplate code (e.g., `@Slf4j` for logging)
+
+## 🚀 **How to Run the Project**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/parking-lot-management-system.git
+   
+2. Set up your PostgreSQL database:
+
+Create a database called Parking.
+Run the SQL scripts to create the required tables (states and sensors).
+Make sure to delet your Application.properties so it works in combination with the Arduino Code.
+3.
+Interact with the REST API using a tool like Postman or curl.
+🔧 Endpoints
+GET /state?lot=<lot>: Get the state of a specific parking lot.
+GET /state/all: Get the state of all parking lots.
+POST /state?lot=<lot>&state=<state>: Set the state of a parking lot.
+DELETE /deleteLot?mac=<mac>: Delete a parking lot by MAC address.
+DELETE /deleteSensor?mac=<mac>: Delete a sensor by MAC address.
+POST /editSensor?mac=<mac>&lot=<lot>: Edit or add a new sensor.
+4. 
+🛠️ Database Schema
+You will need two tables in your PostgreSQL database:
+
+Table: states
+Column	Type	Description
+mac	VARCHAR	MAC address of the sensor
+lot	INT	Parking lot number
+state	INT	Parking lot state
+rssi	INT	Signal strength indicator
+lastseen	BIGINT	Timestamp of last update
+batterystate	FLOAT	Battery status of sensor
+Table: sensors
+Column	Type	Description
+mac	VARCHAR	MAC address of the sensor
+lot	INT	Associated parking lot
+
+
+
