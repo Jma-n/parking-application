@@ -239,7 +239,12 @@ The data is processed and stored in the database via the `LotRepository`. If the
 Create a database called Parking.
 Run the SQL scripts to create the required tables (states and sensors).
 Make sure to delet your Application.properties so it works in combination with the Arduino Code.
+
+
+
+
 3.
+
 Interact with the REST API using a tool like Postman or curl.
 🔧 Endpoints
 GET /state?lot=<lot>: Get the state of a specific parking lot.
@@ -248,7 +253,10 @@ POST /state?lot=<lot>&state=<state>: Set the state of a parking lot.
 DELETE /deleteLot?mac=<mac>: Delete a parking lot by MAC address.
 DELETE /deleteSensor?mac=<mac>: Delete a sensor by MAC address.
 POST /editSensor?mac=<mac>&lot=<lot>: Edit or add a new sensor.
-4. 
+
+
+
+4.
 🛠️ Database Schema
 You will need two tables in your PostgreSQL database:
 
